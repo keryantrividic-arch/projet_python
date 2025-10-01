@@ -24,7 +24,7 @@ def sim_centrale_nuc (context, slave_id=0x00) :
 
 
 if __name__ =='__main__' :
-    device = ModbusDeviceContext(hr=ModbusSequentialDataBlock(0, [500]))
+    device = ModbusDeviceContext(hr=ModbusSequentialDataBlock(0, [500,1000]*2))
 # Contexte du serveur (1 slave par défaut, unit_id=1)
     context = ModbusServerContext(devices = device, single=True)
 
